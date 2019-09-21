@@ -1,0 +1,8 @@
+/data/influxdb/data/
+/data/influxdb/meta/
+/data/influxdb/wal/
+/data/grafana/plugins/
+/data/grafana/png/
+/data/grafana/sessions/
+/data/grafana/grafana.db
+.idea
