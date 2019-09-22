@@ -1,10 +1,14 @@
 version: '3'
 services:
 #  app:
+#    container_name: app
 #    build: .
 #    ports:
-#      - "3000:3000"
+#      - "5000:5000"
+#    networks:
+#      - frontend
   grafana:
+    container_name: grafana
     image: 'grafana/grafana:5.4.3'
     volumes:
       - './data/grafana:/var/lib/grafana'
@@ -15,6 +19,7 @@ services:
     networks:
       - frontend
   influxdb:
+    container_name: influxdb
     image: "influxdb:1.7"
     environment:
       - "INFLUXDB_GRAPHITE_ENABLED=true"
